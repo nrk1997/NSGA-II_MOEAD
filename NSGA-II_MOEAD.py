@@ -408,7 +408,7 @@ def _GA_crossover(P, crossover_rate, coding_length=20, real_encoding=False, x_l=
                 point1.site[i] = np.clip(tx_1, x_l[i], x_r[i])
                 point2.site[i] = np.clip(tx_2, x_l[i], x_r[i])
         else:
-            rst_index = np.random.choice(len(P[0].site) - 2) + 1  # 要进行交换的染色体的位置
+            rst_index = np.random.choice(len(P[0].site) )   # 要进行交换的染色体的位置
             # print(f'before:len(point1.coding)={len(point1.coding)},len(point2.coding)={len(point2.coding)}')
             # #这个是仅交换一个
             # txx=point1.coding[rst_index*coding_length:(rst_index+1)*coding_length]
